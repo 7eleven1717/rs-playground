@@ -1,0 +1,22 @@
+[package]
+name = "ffmpeg-nd"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+dcv-color-primitives = "0.7.0"
+ffmpeg-nd-sys = { path = "../ffmpeg-nd-sys" }
+image = "0.25.6"
+kanal = "0.1.1"
+url = "2.5.6"
+
+[features]
+default = ["avcodec", "avformat", "aom", "x264"]
+avcodec = ["ffmpeg-nd-sys/avcodec"]
+avformat = ["ffmpeg-nd-sys/avformat"]
+aom = ["ffmpeg-nd-sys/aom"]
+x264 = ["ffmpeg-nd-sys/x264"]
+openh264 = ["ffmpeg-nd-sys/openh264"]
+
+[dev-dependencies]
+tempfile = "3.21.0"
