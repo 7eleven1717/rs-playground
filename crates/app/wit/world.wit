@@ -1,0 +1,10 @@
+package docs:app;
+
+world app {
+    import host: interface {
+        call-host: func();
+    }
+    export guest: interface {
+        call-guest: func();
+    }
+}
